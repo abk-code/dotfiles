@@ -1,0 +1,35 @@
+[user]
+	name = Ajey Kulkarni
+	email = bkajey@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
+[imap]
+	folder = [Gmail]/Drafts
+	host = imaps://imap.gmail.com
+	user = bkajey@gmail.com
+[alias]
+	st = status
+	satus = status
+	review = !sh -c 'repo=$1 && repo=${repo:=origin/master} && git --no-pager log --reverse --oneline ${repo}..' -
+	revshow = !sh -c 'repo=$1 && repo=${repo:=origin/master} && git --no-pager log --reverse --oneline ${repo}.. | head -n ${0} | tail -n 1 | cut -f1 -d \" \" | xargs git show'
+	cp = cherry-pick -x
+	ver = describe --match=v* --contains
+	show-ignore = ls-files -ci --exclude-standard
+	graph = log --graph --abbrev-commit --decorate --date=relative --all
+[diff]
+	renames = true
+[pull]
+	ff = only
+	rebase = true
+[push]
+	default = simple
+[credential "https://github.com"]
+	username = desisnacks
+[color]
+	ui = auto
+[commit]
+	gpgsign = true
+[rerere]
+	enabled = true
+[log]
+    decorate = true
