@@ -22,6 +22,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'quramy/tsuquyomi'
+Plugin 'fatih/vim-go'
 
 " ...
 
@@ -49,3 +50,5 @@ au BufNewFile,BufRead *.py
 
 "Encoding to utf-8
 set encoding=utf-8
+
+let g:go_version_warning = 0
